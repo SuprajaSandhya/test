@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <style>#successMessage { display: none; }</style>
+</head>
+<body>
+<form id="registrationForm">
+    <label>Full Name:<br><input type="text" required></label><br>
+    <label>Email:<br><input type="email" required></label><br>
+    <label>Password:<br><input type="password" required></label><br><br>
+    <button type="submit">Register</button>
+</form>
+<div id="successMessage"><p>Registration Successful!</p></div>
+<script>
+    registrationForm.onsubmit = e => {
+        e.preventDefault();
+        successMessage.style.display = "block";
+        registrationForm.reset();
+    };
+</script>
+</body>
+</html>
